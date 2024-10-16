@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DailyDataEntryApp.DataEntryPage"
+             >
+    <VerticalStackLayout>
+        <Label 
+            Text="Data Entry"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+                Text="Name"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+        <Entry x:Name="entry"
+                Placeholder="Enter Name"
+                TextChanged="OnEntryTextChanged"
+                Completed="OnEntryCompleted" />
+
+        <Label
+                Text="Amount"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+        <Entry x:Name="Amount"
+                Placeholder="Enter amounr"
+                TextChanged="OnEntryTextChanged"
+                Completed="OnEntryCompleted" />
+
+        <Label
+                Text="Reason"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+        <Picker x:Name="ReasonPicker"
+                Title="Select a monkey">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Mutual Fund</x:String>
+                    <x:String>RD</x:String>
+                    <x:String>Insurance</x:String>
+                    <x:String>Miscellaneous</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label
+                Text="Date"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+        <DatePicker MinimumDate="01/01/2022"
+                MaximumDate="12/31/2022"
+                Date="06/21/2022" />
+    </VerticalStackLayout>
+</ContentPage>
