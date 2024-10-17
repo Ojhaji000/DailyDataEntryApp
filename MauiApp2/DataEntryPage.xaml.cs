@@ -17,4 +17,9 @@ public partial class DataEntryPage : ContentPage
     {
         string text = ((Entry)sender).Text;
     }
+
+    private void SubmitBtn_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

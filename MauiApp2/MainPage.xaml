@@ -6,20 +6,32 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="25">
-            
+            Spacing="25" >
             <Button
                 x:Name="GoDataEntryPageBtn"
-                Text="Data entry" 
-                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Data Entry" 
+                SemanticProperties.Hint="Go to data entry page"
                 Clicked="GoDataEntryPageBtn_Clicked"
-                HorizontalOptions="Fill" />
-
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand" 
+                FontSize="Title"
+                BackgroundColor="#007BFF"
+                TextColor="White"
+                FontAttributes="Bold"
+                HeightRequest="200"
+                CornerRadius="8"/>
             <Button
                 x:Name="GoDownloadPageBtn"
                 Text="PDF Download" 
+                SemanticProperties.Hint="Go to data entry page"
                 Clicked="GoDownloadPageBtn_Clicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                FontSize="Title"
+                BackgroundColor="#007BFF"
+                TextColor="White"
+                FontAttributes="Bold"
+                HeightRequest="200"/>
             
             
         </VerticalStackLayout>

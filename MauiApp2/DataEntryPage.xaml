@@ -2,37 +2,67 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DailyDataEntryApp.DataEntryPage"
-             >
-    <VerticalStackLayout>
+             BackgroundColor="#f5f5f5">
+
+    <VerticalStackLayout 
+        Padding="20"
+        Spacing="20">
+
+        <!-- Title -->
         <Label 
             Text="Data Entry"
+            FontSize="24"
+            FontAttributes="Bold"
+            TextColor="#333"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+        />
 
-        <Label
-                Text="Name"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-        <Entry x:Name="entry"
-                Placeholder="Enter Name"
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
+        <!-- Name Entry -->
+        <Label 
+            Text="Name"
+            FontAttributes="Bold"
+            TextColor="#666" />
+        <Entry 
+            x:Name="entry"
+            Placeholder="Enter Name"
+            TextChanged="OnEntryTextChanged"
+            Completed="OnEntryCompleted"
+            BackgroundColor="White"
+            TextColor="Black"
+            PlaceholderColor="#888"
+            Margin="0,0,0,10"
+            HeightRequest="50" />
 
-        <Label
-                Text="Amount"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-        <Entry x:Name="Amount"
-                Placeholder="Enter amounr"
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
+        <!-- Amount Entry -->
+        <Label 
+            Text="Amount"
+            FontAttributes="Bold"
+            TextColor="#666" />
+        <Entry 
+            x:Name="Amount"
+            Placeholder="Enter Amount"
+            TextChanged="OnEntryTextChanged"
+            Completed="OnEntryCompleted"
+            BackgroundColor="White"
+            TextColor="Black"
+            PlaceholderColor="#888"
+            Keyboard="Numeric"
+            Margin="0,0,0,10"
+            HeightRequest="50" />
 
-        <Label
-                Text="Reason"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-        <Picker x:Name="ReasonPicker"
-                Title="Select a monkey">
+        <!-- Reason Picker -->
+        <Label 
+            Text="Reason"
+            FontAttributes="Bold"
+            TextColor="#666" />
+        <Picker 
+            x:Name="ReasonPicker"
+            Title="Select Reason"
+            BackgroundColor="White"
+            TextColor="Black"
+            HeightRequest="50"
+            TitleColor="#888">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Mutual Fund</x:String>
@@ -43,12 +73,31 @@
             </Picker.ItemsSource>
         </Picker>
 
-        <Label
-                Text="Date"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-        <DatePicker MinimumDate="01/01/2022"
-                MaximumDate="12/31/2022"
-                Date="06/21/2022" />
+        <!-- Date Picker -->
+        <Label 
+            Text="Date"
+            FontAttributes="Bold"
+            TextColor="#666" />
+        <DatePicker 
+            MinimumDate="01/01/2024"
+            MaximumDate="12/31/2099"
+            Date="06/21/2024"
+            TextColor="Black"
+            BackgroundColor="White"
+            Margin="0,0,0,10"
+            HeightRequest="50" />
+
+        <!-- Submit Button -->
+        <Button 
+            Text="Submit"
+            BackgroundColor="#007BFF"
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="8"
+            HeightRequest="50"
+            VerticalOptions="EndAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Clicked="SubmitBtn_Clicked" />
+
     </VerticalStackLayout>
 </ContentPage>

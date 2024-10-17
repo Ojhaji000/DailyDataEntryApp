@@ -8,5 +8,7 @@ namespace DailyDataEntryApp
 {
     internal class DataManager
     {
+        // when data is entered, store it in a file in json format
+        // 
     }
 }

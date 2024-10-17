@@ -6,4 +6,9 @@ public partial class DownloadPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void DownloadBtn_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
