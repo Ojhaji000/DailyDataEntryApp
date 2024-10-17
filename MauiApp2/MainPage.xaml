@@ -1,4 +1,4 @@
-﻿\<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DailyDataEntryApp.MainPage">
@@ -7,11 +7,6 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <!--<Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />-->
             
             <Button
                 x:Name="GoDataEntryPageBtn"
@@ -20,11 +15,9 @@
                 Clicked="GoDataEntryPageBtn_Clicked"
                 HorizontalOptions="Fill" />
 
-
             <Button
                 x:Name="GoDownloadPageBtn"
                 Text="PDF Download" 
-                SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="GoDownloadPageBtn_Clicked"
                 HorizontalOptions="Fill" />
             

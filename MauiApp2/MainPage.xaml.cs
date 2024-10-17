@@ -7,14 +7,14 @@
             InitializeComponent();
         }
 
-        private void GoDownloadPageBtn_Clicked(object sender, EventArgs e)
+        private async void GoDownloadPageBtn_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new DownloadPage());
         }
 
-        private void GoDataEntryPageBtn_Clicked(object sender, EventArgs e)
+        private async void GoDataEntryPageBtn_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new DataEntryPage());
         }
     }
 
