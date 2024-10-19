@@ -20,14 +20,12 @@
 
         <!-- Name Entry -->
         <Label 
-            Text="Name"
+            Text="DepositorName"
             FontAttributes="Bold"
             TextColor="#666" />
         <Entry 
-            x:Name="entry"
+            x:Name="DepositorName"
             Placeholder="Enter Name"
-            TextChanged="OnEntryTextChanged"
-            Completed="OnEntryCompleted"
             BackgroundColor="White"
             TextColor="Black"
             PlaceholderColor="#888"
@@ -36,14 +34,12 @@
 
         <!-- Amount Entry -->
         <Label 
-            Text="Amount"
+            Text="DepositedAmount"
             FontAttributes="Bold"
             TextColor="#666" />
         <Entry 
-            x:Name="Amount"
+            x:Name="DepositedAmount"
             Placeholder="Enter Amount"
-            TextChanged="OnEntryTextChanged"
-            Completed="OnEntryCompleted"
             BackgroundColor="White"
             TextColor="Black"
             PlaceholderColor="#888"
@@ -57,12 +53,13 @@
             FontAttributes="Bold"
             TextColor="#666" />
         <Picker 
-            x:Name="ReasonPicker"
+            x:Name="DepositReasonPicker"
             Title="Select Reason"
             BackgroundColor="White"
             TextColor="Black"
             HeightRequest="50"
-            TitleColor="#888">
+            TitleColor="#888"
+            SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Mutual Fund</x:String>
@@ -79,6 +76,7 @@
             FontAttributes="Bold"
             TextColor="#666" />
         <DatePicker 
+            x:Name="DepositDate"
             MinimumDate="01/01/2024"
             MaximumDate="12/31/2099"
             Date="06/21/2024"
